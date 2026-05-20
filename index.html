@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <title>Náhodná stránka</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #4facfe, #00f2fe);
+      color: #fff;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .box {
+      background: rgba(0,0,0,0.3);
+      padding: 20px;
+      border-radius: 15px;
+      display: inline-block;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #222;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1>Vitaj na náhodnej stránke</h1>
+    <p id="text">Klikni na tlačidlo a zmením text</p>
+    <button onclick="zmenText()">Klikni ma</button>
+  </div>
+
+  <script>
+    const spravy = [
+      "Ahoj svet!",
+      "Dnes je pekný deň",
+      "HTML je super 😄",
+      "JavaScript je mocný",
+      "Náhodná správa!"
+    ];
+
+    function zmenText() {
+      const nahodna = Math.floor(Math.random() * spravy.length);
+      document.getElementById("text").innerText = spravy[nahodna];
+    }
+  </script>
+
+</body>
+</html>
